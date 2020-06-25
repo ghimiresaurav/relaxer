@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    text-align: center;
+    font-family: Poppins;
+    color: white;
+}
+h1{
+    margin: 30px auto;
+}
+.container{
+    width: 450px;
+    height: 450px;
+    margin: 75px auto;
+    position: relative;    
+}
+@media(max-width: 500px){
+    .container{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media(max-width: 350px){
+    .container{
+        width: 275px;
+        height: 275px;
+    }
+}
+.pointer-container{
+    position: absolute;  
+    height: 100%;
+    width: 100%;
+    animation: rotate 8s linear infinite;
+}
+@keyframes rotate{
+    0%{transform: rotateZ(0deg);}
+    100%{
+        transform: rotateZ(360deg)
+    }
+}
+#pointer{
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    margin: auto;
+    border-radius: 50%;
+}
+#ring{
+    position: absolute;
+    height: 85%;
+    width: 85%;
+    margin: 7.5%;
+    border-radius: 50%;
+    background: conic-gradient(#2098b9 0%,
+                                #0f9175 40%,
+                                #206d5c 40%,
+                                #34796a 60%,
+                                #03b194 60%,
+                                #337ed3 100%)
+}
+#circle{
+    position: absolute;
+    height: 94%;
+    width: 94%;
+    background-color: black;
+    margin: 3%;
+    border-radius: 50%;
+}
+#text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 30px;
+    width: 200px;
+    margin-left: -100px;
+    margin-top: -15px;
+    color: white;
+    line-height: 30px;
+    font-size: 3.5vh;
+}
+.larger{
+    animation: grow 3.2s linear forwards;
+}
+@keyframes grow{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+.smaller{
+    animation: shrink 3.2s linear forwards;
+}
+@keyframes shrink{
+    0%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
